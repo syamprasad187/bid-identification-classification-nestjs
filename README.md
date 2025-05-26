@@ -25,66 +25,128 @@ It helps procurement managers by automating bid email recognition, organizing bi
 
 ## Project Structure
 
-┣ 📂dist
-┃ ┣ 📜app.controller.d.ts
-┃ ┣ 📜app.controller.js
-┃ ┣ 📜app.controller.js.map
-┃ ┣ 📜app.module.d.ts
-┃ ┣ 📜app.module.js
-┃ ┣ 📜app.module.js.map
-┃ ┣ 📜app.service.d.ts
-┃ ┣ 📜app.service.js
-┃ ┣ 📜app.service.js.map
-┃ ┣ 📜main.d.ts
-┃ ┣ 📜main.js
-┃ ┣ 📜main.js.map
-┃ ┗ 📜tsconfig.build.tsbuildinfo
-┣ 📂src
-┃ ┣ 📂bids
-┃ ┃ ┣ 📜bid.entity.ts
-┃ ┃ ┣ 📜bids.controller.spec.ts
-┃ ┃ ┣ 📜bids.controller.ts
-┃ ┃ ┣ 📜bids.module.ts
-┃ ┃ ┣ 📜bids.service.spec.ts
-┃ ┃ ┗ 📜bids.service.ts
-┃ ┣ 📂classification
-┃ ┃ ┣ 📜classification.controller.spec.ts
-┃ ┃ ┣ 📜classification.controller.ts
-┃ ┃ ┣ 📜classification.module.ts
-┃ ┃ ┣ 📜classification.service.spec.ts
-┃ ┃ ┗ 📜classification.service.ts
-┃ ┣ 📂contracts
-┃ ┃ ┣ 📜contract.entity.ts
-┃ ┃ ┣ 📜contracts.controller.spec.ts
-┃ ┃ ┣ 📜contracts.controller.ts
-┃ ┃ ┣ 📜contracts.module.ts
-┃ ┃ ┣ 📜contracts.service.spec.ts
-┃ ┃ ┗ 📜contracts.service.ts
-┃ ┣ 📂emails
-┃ ┃ ┣ 📜email.entity.ts
-┃ ┃ ┣ 📜emails.controller.spec.ts
-┃ ┃ ┣ 📜emails.controller.ts
-┃ ┃ ┣ 📜emails.module.ts
-┃ ┃ ┣ 📜emails.service.spec.ts
-┃ ┃ ┣ 📜emails.service.ts
-┃ ┃ ┗ 📜rules.engine.ts
-┃ ┣ 📜app.controller.spec.ts
-┃ ┣ 📜app.controller.ts
-┃ ┣ 📜app.module.ts
-┃ ┣ 📜app.service.ts
-┃ ┗ 📜main.ts
-┣ 📂test
-┃ ┣ 📜app.e2e-spec.ts
-┃ ┗ 📜jest-e2e.json
-┣ 📜.env
-┣ 📜.gitignore
-┣ 📜.prettierrc
-┣ 📜eslint.config.mjs
-┣ 📜nest-cli.json
-┣ 📜package.json
-┣ 📜README.md
-┣ 📜tsconfig.build.json
-┗ 📜tsconfig.json
+
+
+BID-IDENTIFICATION-AND-CLASSIFICATION
+└─ bid-identification
+   ├─ .env
+   ├─ .prettierrc
+   ├─ dist
+   │  ├─ app.controller.d.ts
+   │  ├─ app.controller.js
+   │  ├─ app.controller.js.map
+   │  ├─ app.module.d.ts
+   │  ├─ app.module.js
+   │  ├─ app.module.js.map
+   │  ├─ app.service.d.ts
+   │  ├─ app.service.js
+   │  ├─ app.service.js.map
+   │  ├─ bids
+   │  │  ├─ bid.entity.d.ts
+   │  │  ├─ bid.entity.js
+   │  │  ├─ bid.entity.js.map
+   │  │  ├─ bids.controller.d.ts
+   │  │  ├─ bids.controller.js
+   │  │  ├─ bids.controller.js.map
+   │  │  ├─ bids.module.d.ts
+   │  │  ├─ bids.module.js
+   │  │  ├─ bids.module.js.map
+   │  │  ├─ bids.service.d.ts
+   │  │  ├─ bids.service.js
+   │  │  └─ bids.service.js.map
+   │  ├─ classification
+   │  │  ├─ classification.controller.d.ts
+   │  │  ├─ classification.controller.js
+   │  │  ├─ classification.controller.js.map
+   │  │  ├─ classification.module.d.ts
+   │  │  ├─ classification.module.js
+   │  │  ├─ classification.module.js.map
+   │  │  ├─ classification.service.d.ts
+   │  │  ├─ classification.service.js
+   │  │  └─ classification.service.js.map
+   │  ├─ contracts
+   │  │  ├─ contract.entity.d.ts
+   │  │  ├─ contract.entity.js
+   │  │  ├─ contract.entity.js.map
+   │  │  ├─ contracts.controller.d.ts
+   │  │  ├─ contracts.controller.js
+   │  │  ├─ contracts.controller.js.map
+   │  │  ├─ contracts.module.d.ts
+   │  │  ├─ contracts.module.js
+   │  │  ├─ contracts.module.js.map
+   │  │  ├─ contracts.service.d.ts
+   │  │  ├─ contracts.service.js
+   │  │  └─ contracts.service.js.map
+   │  ├─ emails
+   │  │  ├─ create-email.dto.d.ts
+   │  │  ├─ create-email.dto.js
+   │  │  ├─ create-email.dto.js.map
+   │  │  ├─ email.entity.d.ts
+   │  │  ├─ email.entity.js
+   │  │  ├─ email.entity.js.map
+   │  │  ├─ emails.controller.d.ts
+   │  │  ├─ emails.controller.js
+   │  │  ├─ emails.controller.js.map
+   │  │  ├─ emails.module.d.ts
+   │  │  ├─ emails.module.js
+   │  │  ├─ emails.module.js.map
+   │  │  ├─ emails.service.d.ts
+   │  │  ├─ emails.service.js
+   │  │  ├─ emails.service.js.map
+   │  │  ├─ rules.engine.d.ts
+   │  │  ├─ rules.engine.js
+   │  │  └─ rules.engine.js.map
+   │  ├─ main.d.ts
+   │  ├─ main.js
+   │  ├─ main.js.map
+   │  └─ tsconfig.build.tsbuildinfo
+   ├─ eslint.config.mjs
+   ├─ LICENSE
+   ├─ nest-cli.json
+   ├─ package-lock.json
+   ├─ package.json
+   ├─ README.md
+   ├─ src
+   │  ├─ app.controller.spec.ts
+   │  ├─ app.controller.ts
+   │  ├─ app.module.ts
+   │  ├─ app.service.ts
+   │  ├─ bids
+   │  │  ├─ bid.entity.ts
+   │  │  ├─ bids.controller.spec.ts
+   │  │  ├─ bids.controller.ts
+   │  │  ├─ bids.module.ts
+   │  │  ├─ bids.service.spec.ts
+   │  │  └─ bids.service.ts
+   │  ├─ classification
+   │  │  ├─ classification.controller.spec.ts
+   │  │  ├─ classification.controller.ts
+   │  │  ├─ classification.module.ts
+   │  │  ├─ classification.service.spec.ts
+   │  │  └─ classification.service.ts
+   │  ├─ contracts
+   │  │  ├─ contract.entity.ts
+   │  │  ├─ contracts.controller.spec.ts
+   │  │  ├─ contracts.controller.ts
+   │  │  ├─ contracts.module.ts
+   │  │  ├─ contracts.service.spec.ts
+   │  │  └─ contracts.service.ts
+   │  ├─ emails
+   │  │  ├─ create-email.dto.ts
+   │  │  ├─ email.entity.ts
+   │  │  ├─ emails.controller.spec.ts
+   │  │  ├─ emails.controller.ts
+   │  │  ├─ emails.module.ts
+   │  │  ├─ emails.service.spec.ts
+   │  │  ├─ emails.service.ts
+   │  │  └─ rules.engine.ts
+   │  └─ main.ts
+   ├─ test
+   │  ├─ app.e2e-spec.ts
+   │  └─ jest-e2e.json
+   ├─ tsconfig.build.json
+   └─ tsconfig.json
+
 
 ## Features
 
@@ -144,4 +206,70 @@ DB_NAME=bid_db
 npm run start:dev
 ```
 
+---
+
+## 📚 API Endpoints Overview
+
+The following endpoints are currently implemented and functional:
+
+| Method | Endpoint      | Description                                         |
+|--------|---------------|-----------------------------------------------------|
+| POST   | `/emails`     | Accepts a new email, analyzes it for bid content   |
+| GET    | `/emails`     | Returns all stored emails                          |
+| GET    | `/bids`       | Returns all bid records                            |
+| POST   | `/bids`       | Creates a new bid record                           |
+| GET    | `/contracts`  | Retrieves all contracts                            |
+| POST   | `/contracts`  | Creates a contract associated with a bid           |
+
+> Note: Classification and search/filter features are planned but not yet implemented.
+
+---
+
+## 🔍 How BID Recognition Works (Current Status)
+
+The bid recognition system uses a basic keyword-matching rules engine.
+
+### Current Flow:
+1. A client sends an email using the `/emails` endpoint.
+2. The system scans the `subject` and `body` for predefined bid-related keywords:
+   - Examples: `bid`, `proposal`, `quotation`, `rfq`, `tender`
+3. If matched, the system logs the email as bid-related and stores it in the database.
+4. New bid records can be created manually and are associated with emails when appropriate.
+5. Contracts can be created and linked to bids.
+
+---
+
+## 🧱 NestJS Framework Info
+
+This project uses [NestJS](https://nestjs.com/), a progressive Node.js framework with TypeScript.
+
+### Features Used So Far:
+- Modular structure using Controllers, Services, Modules
+- TypeORM integration with PostgreSQL
+- DTOs for validation
+- Environment configuration using `.env`
+- Basic REST API architecture
+
+> IDE: Visual Studio Code  
+> Database: PostgreSQL
+
+---
+
+## 🚀 Future Improvements (Based on Current Progress)
+
+- Auto-link follow-up emails to existing bids
+- Add classification logic (project type, contractor, bid type)
+- Implement search and filtering on bid data
+- Support bid/contract status tracking
+- Create front-end dashboard for visual management
+- Integrate Gmail API for real-time email fetch
+
+---
+
+## 📞 Contact
+
+**Developer**: Uppu Syam Prasad
+**GitHub Repository**: https://github.com/syamprasad187/bid-identification-classification-nestjs.git
+**Email**: syamuppu05@gmail.com
+---
 
