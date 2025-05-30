@@ -26,7 +26,7 @@ It helps procurement managers by automating bid email recognition, organizing bi
 ## Project Structure
 
 
-
+```bash
 BID-IDENTIFICATION-AND-CLASSIFICATION
 └─ bid-identification
    ├─ .env
@@ -146,7 +146,7 @@ BID-IDENTIFICATION-AND-CLASSIFICATION
    │  └─ jest-e2e.json
    ├─ tsconfig.build.json
    └─ tsconfig.json
-
+```
 
 ## Features
 
@@ -268,8 +268,7 @@ This project uses [NestJS](https://nestjs.com/), a progressive Node.js framework
 
 ## 📞 Contact
 
-**Developer**: Uppu Syam Prasad
-**GitHub Repository**: https://github.com/syamprasad187/bid-identification-classification-nestjs.git
-**Email**: syamuppu05@gmail.com
----
+- **Developer**: Uppu Syam Prasad  
+- **GitHub Repository**: [bid-identification-classification-nestjs](https://github.com/syamprasad187/bid-identification-classification-nestjs.git)  
+- **Email**: [syamuppu05@gmail.com](mailto:syamuppu05@gmail.com)
 
